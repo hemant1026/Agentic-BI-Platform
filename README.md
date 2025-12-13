@@ -1,107 +1,99 @@
-# Data Visualization & Analysis Platform
+# 📊 LangChain Data Visualization & Analysis Platform
 
-A production-ready data visualization and analysis platform with AI-powered insights, built with React frontend and Node.js/Python backend.
+![React](https://img.shields.io/badge/React-18-blue) ![Node.js](https://img.shields.io/badge/Node.js-16+-green) ![Python](https://img.shields.io/badge/Python-3.10+-blue) ![LangChain](https://img.shields.io/badge/LangChain-AI-orange)
 
-## Features
+**AI-powered full-stack data analysis platform with multi-agent BI system and interactive visualizations**
 
-- **Smart Data Parsing**: Automatically understands complex Excel structures and summary formats
-- **BI Agent Team**: Multi-agent system for deep data analysis
-- **Meaningful KPIs**: Automatically generates contextual KPIs with descriptive names
-- **Interactive Visualizations**: Dynamic charts and graphs using Plotly.js
-- **AI Chat Interface**: Chat with your data using LangChain agents
+---
 
-## Architecture
+## 📖 Overview
 
-```
-LangChain/
-├── backend/              # Node.js + Python backend
-│   ├── server.js        # Express API server
-│   ├── bi_agent_team.py # BI analysis agents
-│   ├── smart_data_parser_v2.py # Smart data parser
-│   ├── process_data.py  # Data processing
-│   ├── get_chart_data.py # Chart data extraction
-│   └── chat_agent.py    # Chat interface
-├── frontend/            # React frontend
-│   └── src/
-│       └── App.js       # Main React component
-├── requirements.txt     # Python dependencies
-└── README.md           # This file
-```
+Production-ready data visualization and analysis platform that combines React frontend with Node.js/Python backend to deliver AI-powered insights. Features include smart data parsing, multi-agent BI analysis, automatic KPI generation, and conversational data exploration using LangChain.
 
-## Setup
+## ✨ Key Features
+
+### 🤖 Multi-Agent BI System
+- **Intelligent Analysis**: Team of specialized AI agents for deep data insights
+- **Contextual KPIs**: Auto-generated metrics with business-relevant names
+- **Pattern Recognition**: Automatic trend and anomaly detection
+
+### 📈 Interactive Visualizations
+- **Plotly.js Integration**: Dynamic, interactive charts
+- **Multiple Chart Types**: Line, bar, scatter, heatmap, and more
+- **Real-time Updates**: Live data visualization
+
+### 💬 AI Chat Interface
+- **Natural Language Queries**: Ask questions in plain English
+- **Contextual Responses**: AI understands your data context
+- **LangChain Powered**: Advanced conversational AI capabilities
+
+### 📁 Smart Data Processing
+- **Format Agnostic**: Handles CSV, Excel, JSON
+- **Complex Structures**: Parses nested and summary formats
+- **Data Validation**: Automatic quality checks
+
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 16+
 - Python 3.10+
-- npm or yarn
+- OpenAI API key
 
 ### Installation
 
-1. **Install Python dependencies:**
 ```bash
+# Clone repository
+git clone https://github.com/hemant1026/LangChain.git
+cd LangChain
+
+# Install Python dependencies
 pip install -r requirements.txt
+
+# Install backend dependencies
+cd backend && npm install && cd ..
+
+# Install frontend dependencies
+cd frontend && npm install && cd ..
+
+# Configure environment
+echo "OPENAI_API_KEY=your_key
+NOMIC_API_KEY=your_key  
+PORT=3002" > .env
 ```
 
-2. **Install backend dependencies:**
+### Run Application
+
 ```bash
-cd backend
-npm install
+# Terminal 1: Start backend (Port 3001)
+cd backend && node server.js
+
+# Terminal 2: Start frontend (Port 3002)
+cd frontend && npm start
 ```
 
-3. **Install frontend dependencies:**
-```bash
-cd frontend
-npm install
+Access at: http://localhost:3002
+
+## 💻 Tech Stack
+
+**Frontend**: React 18, Plotly.js, Axios
+**Backend**: Node.js, Express
+**AI/ML**: Python, LangChain, OpenAI GPT-4, Pandas, NumPy
+**Data Viz**: Plotly, D3.js
+
+## 🏗️ Architecture
+
+```
+Frontend (React) ← HTTP → Backend (Express) ← IPC → Python Agents
+     ↓                            ↓                        ↓
+   UI/UX              API Gateway            AI Processing
 ```
 
-4. **Set up environment variables:**
-Create a `.env` file in the root directory:
-```
-OPENAI_API_KEY=your_openai_key
-NOMIC_API_KEY=your_nomic_key
-PORT=3002
-```
+## 👨‍💻 Author
 
-## Running the Application
+**Hemant Krishnakumar**
+- GitHub: [@hemant1026](https://github.com/hemant1026)
+- Email: hemant1026@gmail.com
 
-### Start Backend (Port 3001)
-```bash
-cd backend
-node server.js
-```
+---
 
-### Start Frontend (Port 3002)
-```bash
-cd frontend
-npm start
-```
-
-The application will be available at `http://localhost:3002`
-
-## Usage
-
-1. **Upload Data**: Upload CSV, Excel, or JSON files through the web interface
-2. **View KPIs**: Automatically generated KPIs with meaningful names
-3. **Explore Visualizations**: Interactive charts and graphs
-4. **Chat with Data**: Use the chat interface to ask questions about your data
-
-## BI Agent Team
-
-The system uses a multi-agent approach for data analysis:
-
-- **DataStructureAgent**: Understands data structure and infers column meanings
-- **VisualizationAgent**: Recommends appropriate visualizations
-- **KPIAgent**: Generates meaningful KPIs with proper context
-
-See `BI_AGENT_TEAM.md` for detailed documentation.
-
-## Technology Stack
-
-- **Frontend**: React, Material-UI, Plotly.js
-- **Backend**: Node.js (Express), Python (Pandas, NumPy)
-- **AI**: LangChain, OpenAI
-- **Data Processing**: Pandas, NumPy
-
-## License
-
-MIT
+⭐ Star this repository if you find it helpful!
