@@ -1,12 +1,20 @@
-# Data Directory
+# Example Datasets
 
-This directory contains sample datasets for testing the Data Visualization Agent.
+Sample datasets for testing the Agentic BI Platform. Upload any of these through the UI at http://localhost:3002.
 
-## Sample Data
+| Dataset | Rows | Columns | Domain | Description |
+|---------|------|---------|--------|-------------|
+| `sample_data.csv` | 20 | 6 | Retail | Daily sales by region and product category. Good for time series, bar charts, and scatter plots. |
+| `ecommerce_orders.csv` | 100 | 13 | E-commerce | Order history with products, categories, payment methods, shipping, and discounts. Tests multi-column KPI generation. |
+| `employee_performance.csv` | 50 | 12 | HR | Employee metrics including performance scores, satisfaction, salary, training, and overtime. Tests distribution analysis and correlation detection. |
+| `financial_quarterly.csv` | 24 | 12 | Finance | 6 years of quarterly P&L data with revenue, costs, profit, assets, liabilities, and headcount. Tests trend detection and financial KPIs. |
 
-- `sample_data.csv`: Sample sales data with date, sales, region, product category, quantity, and price columns
+## Programmatic Usage
 
-## Usage
+```bash
+# Analyze a single file
+python examples/quick_analysis.py data/sample_data.csv
 
-You can upload these files through the Data Visualization Agent UI, or reference them in your queries.
-
+# Batch analyze all datasets
+python examples/batch_analysis.py data/
+```

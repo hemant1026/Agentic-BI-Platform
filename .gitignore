@@ -64,6 +64,9 @@ htmlcov/
 *.xls
 *.json
 !data/sample_data.csv
+!data/ecommerce_orders.csv
+!data/employee_performance.csv
+!data/financial_quarterly.csv
 !backend/uploads/.gitkeep
 
 # OS
